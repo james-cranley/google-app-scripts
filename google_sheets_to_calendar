@@ -1,0 +1,42 @@
+/** Make a Google Sheet with the columns 'Date', 'Shift', and 'CalendarID'.
+
+Copy shifts into the 'Shift' column. Fill in weekend blanks with 'Weekend Off'
+
+Populate the Date column with appropriate dates and then select them and go: Format > Number > Date.
+
+Recommend making a dedicated google calendar e.g. Hospital Rota.
+
+Put the Calendar ID in cell C2. Get the ID by going to Google Calendar > Sharings & Settings. It ends groups.google.com.
+
+Date    Shift        ID
+3/8/20  0800-1730    "some ID"
+4/8/20  0800-1730
+5/8/20  0800-1730
+
+etc.
+
+At the top of the sheet go: Tools > Script Editor
+
+Paste the following into script editor and go: Run > Run function > my_function
+
+Your google 
+
+**/
+
+function create_events() {
+  var spreadsheet = SpreadsheetApp.getActiveSheet();
+  var calendarID = spreadsheet.getRange("C2").getValue();
+  var eventCal = CalendarApp.getCalendarById(calendarID);
+  
+  var rota = spreadsheet.getRange("A2:B153").getValues();
+  
+  for (x=0; x<rota.length; x++) {
+    
+    var shift = rota[x];
+    
+    var date = shift[0];
+    var title = shift[1];
+    
+    eventCal.createAllDayEvent(title, date);
+  }
+}
