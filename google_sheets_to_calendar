@@ -4,7 +4,7 @@ Copy shifts into the 'Shift' column. Fill in weekend blanks with 'Weekend Off'
 
 Populate the Date column with appropriate dates and then select them and go: Format > Number > Date.
 
-Recommend making a dedicated google calendar e.g. Hospital Rota.
+Recommend making a dedicated google calendar e.g. 'Hospital Rota'.
 
 Put the Calendar ID in cell C2. Get the ID by going to Google Calendar > Sharings & Settings. It ends groups.google.com.
 
@@ -18,8 +18,6 @@ etc.
 At the top of the sheet go: Tools > Script Editor
 
 Paste the following into script editor and go: Run > Run function > my_function
-
-Your google 
 
 **/
 
