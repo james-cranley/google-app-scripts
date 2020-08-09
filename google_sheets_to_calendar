@@ -31,7 +31,6 @@ function create_events() {
   for (x=0; x<rota.length; x++) {
     
     var shift = rota[x];
-    
     var date = shift[0];
     var title = shift[1];
     
