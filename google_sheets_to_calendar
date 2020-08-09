@@ -9,7 +9,7 @@ Recommend making a dedicated google calendar e.g. 'Hospital Rota'.
 Put the Calendar ID in cell C2. Get the ID by going to Google Calendar > Sharings & Settings. It ends groups.google.com.
 
 Date    Shift        ID
-3/8/20  0800-1730    "some ID"
+3/8/20  0800-1730    some ID
 4/8/20  0800-1730
 5/8/20  0800-1730
 
